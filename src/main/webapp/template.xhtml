@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="css/default.css"/>
+        <h:outputStylesheet name="css/cssLayout.css"/>
+        <title>Kurs EJB</title>
+    </h:head>
+
+    <h:body>
+
+
+
+        <p:layout fullPage="true">
+
+            <p:layoutUnit position="north" size="80"  resizable="false" closable="false" collapsible="false">
+
+                <div align="center"> <h1> KURS EJB </h1> </div>
+
+            </p:layoutUnit>
+
+            <p:layoutUnit position="south" size="70"  resizable="false" closable="false" collapsible="false">
+                <div align="center"> <h6> Bilişim Eğitim Merkezi @ 2018 </h6> </div>
+            </p:layoutUnit>
+
+            <p:layoutUnit position="west" size="200"  resizable="false" closable="false" collapsible="false">
+                <h:form>
+                    <p:menu toggleable="true">
+                        <p:submenu label="Kişi İşlemleri">
+                            <p:menuitem value="Ekle"   icon="ui-icon-plus" />
+                            <p:menuitem value="Sil"   icon="ui-icon-close" />
+                            <p:menuitem value="Listele"   icon="ui-icon-script" />
+                            <p:menuitem value="Güncelle"   icon="ui-icon-arrowrefresh-1-n"/>
+                        </p:submenu>
+                        
+                        <p:submenu label="Yönetim">
+                            <p:menuitem value="Menü" action="menu.xhtml?faces-redirect=true" icon="ui-icon-home"/>
+                            <p:menuitem value="Güvenli Çıkış"  icon="ui-icon-cancel"/>
+                        </p:submenu>
+                    </p:menu>
+                </h:form>
+            </p:layoutUnit>
+
+
+            <p:layoutUnit position="center">
+                <ui:insert name="content">Content</ui:insert>
+            </p:layoutUnit>
+
+        </p:layout>
+
+
+    </h:body>
+
+</html>
